@@ -1,17 +1,5 @@
 require './card_shoe.rb'
 
-#################################################################
-######################### INSTRUCTIONS ##########################
-#################################################################
-# 1. Preferred ruby version 2.7
-# 2. Clone the repo and cd to home directory
-# 2. Start the ruby console using `irb`
-# 3. Require the file `require './blackjack.rb'`
-# 4. Play a single hand of Blackjack `Blackjack.play_one_hand`
-# 5. Play a full game of Blackjack `Blackjack.play_full_game`
-# 6. Happy Gambling :)
-#################################################################
-
 class Blackjack
     class << self
         # To play a single hand of Blackjack
@@ -31,6 +19,7 @@ class Blackjack
         reset_hands
     end
 
+    # Reset player and dealer hands
     def reset_hands
         @player_hand = []
         @dealer_hand = []
@@ -75,6 +64,8 @@ class Blackjack
             reset_hands
             play_one_hand
         end
+
+        puts("Game over! Card shoe must be reshuffled.")
     end
 
     private
